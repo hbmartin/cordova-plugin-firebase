@@ -24,6 +24,7 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigInfo;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigValue;
+import com.google.firebase.FirebaseApp;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
@@ -50,9 +51,11 @@ public class FirebaseDatabasePlugin extends CordovaPlugin {
         final Context context = this.cordova.getActivity().getApplicationContext();
         this.cordova.getThreadPool().execute(new Runnable() {
             public void run() {
-                Log.d(TAG, "Starting Firebase plugin");
-                mDatabase = FirebaseDatabase.getInstance().getReference();
-                mAuth = FirebaseAuth.getInstance();
+                if (!FirebaseApp.getApps(context).isEmpty()) {
+                    Log.d(TAG, "Starting Firebase plugin");
+                    mDatabase = FirebaseDatabase.getInstance().getReference();
+                    mAuth = FirebaseAuth.getInstance();
+                }
             }
         });
     }
