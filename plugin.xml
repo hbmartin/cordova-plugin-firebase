@@ -25,7 +25,6 @@
 		<source-file src="src/android/FirebaseDatabasePlugin.java" target-dir="src/org/apache/cordova/firebase" />
 
 		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-		<framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
 		<framework src="com.google.android.gms:play-services-analytics:9.0.0" />
 		<framework src="com.google.code.gson:gson:2.+" />
 		<framework src="com.google.firebase:firebase-core:9.4.0" />

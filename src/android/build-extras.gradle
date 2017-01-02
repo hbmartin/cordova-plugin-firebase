@@ -1,12 +1,1 @@
-cdvPluginPostBuildExtras.add({
-  println 'handscan-build-extras'
-  buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.google.gms:google-services:3.0.0'
-    }
-  }
-  apply plugin: 'com.google.gms.google-services'
-})
+apply plugin: 'com.google.gms.google-services'
