@@ -56,6 +56,7 @@
 
 		<header-file src="src/ios/Firebase/Firebase.h" />
 
+		<framework custom="true" src="src/ios/Firebase/Analytics/FirebaseCore.framework" />
 		<framework custom="true" src="src/ios/Firebase/Analytics/FirebaseInstanceID.framework" />
 		<framework custom="true" src="src/ios/Firebase/Analytics/GoogleInterchangeUtilities.framework" />
 		<framework custom="true" src="src/ios/Firebase/Analytics/GoogleSymbolUtilities.framework" />
